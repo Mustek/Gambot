@@ -44,7 +44,7 @@ sub match {
 
   elsif($core->{'message'} =~ /^buttcoin transfer ([0-9]+) $validNick$/) {
     buttcoin_set_stat_active($core,$core->{'sender_nick'});
-    return buttcoin_transfer($core,$core->{'sender_nick'},$2,$1,'No reason given.');
+    return buttcoin_transfer($core,$core->{'sender_nick'},$2,$1,'No reason given');
   }
 
   elsif($core->{'message'} =~ /^buttcoin transfer ([0-9]+) $validNick (.+)$/) {
@@ -54,7 +54,7 @@ sub match {
 
   elsif($core->{'message'} =~ /^buttcoin tip $validNick$/) {
     buttcoin_set_stat_active($core,$core->{'sender_nick'});
-    return buttcoin_transfer($core,$core->{'sender_nick'},$1,10,'No reason given.');
+    return buttcoin_transfer($core,$core->{'sender_nick'},$1,10,'No reason given');
   }
 
   elsif($core->{'message'} =~ /^buttcoin tip $validNick (.+)$/) {
